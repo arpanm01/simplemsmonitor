@@ -1,0 +1,32 @@
+
+spring:
+  profile: p113
+  application:
+    name: MYMSMonitor
+  h2:
+    console:
+      enabled: true
+  datasource:
+        driverClassName: org.h2.Driver
+        password: sa
+        url: jdbc:h2:mem:testdb
+        username: sa
+    
+server:
+  port: 9696
+  
+# Output to a temp_folder/file
+logging:
+  file: c:/temp/application.log
+  path: /msmonitor/logs/
+  pattern:
+    file= %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%  
+  level:
+    com.am.spring.monitor.simplemsmonitor: INFO 
+    com.am.spring.monitor.transferobjects: TRACE
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
