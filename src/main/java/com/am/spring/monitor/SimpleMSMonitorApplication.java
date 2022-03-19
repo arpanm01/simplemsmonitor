@@ -15,7 +15,7 @@ public class SimpleMSMonitorApplication {
 	public static void main(String[] args) {
 		LOGGER.info("$$$###Starting Microservice Monitor###$$$");
 		SpringApplication.run(SimpleMSMonitorApplication.class, args);
-		LOGGER.info("$$$###Starting Microservice Monitor###sdsdsd$$$");
+
 	}
 
 }
